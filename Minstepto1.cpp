@@ -36,9 +36,9 @@ int countMinStepsToOne(int n,int * arr)
 
 int countStepsToOne(int n)
 {		
-     int * arr  = new int[n+1];
-	 for(int i=0;i<=n;i++){
-         arr[i] =  -1;
-     }
-    return countMinStepsToOne(n,arr);
+        int * arr  = new int[n+1];
+        for(int i=0;i<=n;i++){
+            arr[i] =  -1;
+        }
+        return countMinStepsToOne(n,arr);
 }
