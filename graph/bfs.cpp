@@ -6,12 +6,24 @@ void bfs(int ** edges,int n,int sv,bool * visited){
     visited[sv] = true;
     while(!q.empty()){
         int curr = q.front();
-        cout<<curr<<endl;
+        cout<<curr<<" ";
         q.pop();
         for(int i = 0;i<n;i++){
             if(edges[curr][i]&&!visited[i]){
                 q.push(i);
+                visited[i] = true;
             }
+        }
+    }
+}
+void bfs_allcomp( int **edges, int n){
+    bool *visited = new bool[n];
+    for(int i =0 ;i<n;i++){
+        visited[i] = false;
+    }
+    for(int i =0;i<n;i++){
+        if(!visited[i]){
+             bfs(edges,n,i,visited);
         }
     }
 }
@@ -31,9 +43,5 @@ int main() {
         edges[s][f] = 1;
         edges[f][s] = 1;
     }
-    bool *visited = new bool[n];
-    for(int i =0 ;i<n;i++){
-        visited[i] = false;
-    }
-   bfs(edges,n,0,visited);
+    bfs_allcomp(edges,n);
 }

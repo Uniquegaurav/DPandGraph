@@ -1,12 +1,23 @@
 #include<bits/stdc++.h>
 using namespace std;
 void dfs(int ** edges,int n,int sv,bool * visited){
-    cout<<sv<<endl;
+    cout<<sv<<" ";
     visited[sv] = true;
     for(int i=0;i<n;i++){
         if(i==sv) continue;
         if(edges[sv][i]&&!visited[i]){
             dfs(edges,n,i,visited);
+        }
+    }
+}
+void dfs_allcomp( int **edges, int n){
+    bool *visited = new bool[n];
+    for(int i =0 ;i<n;i++){
+        visited[i] = false;
+    }
+    for(int i =0;i<n;i++){
+        if(!visited[i]){
+             dfs(edges,n,i,visited);
         }
     }
 }
@@ -26,9 +37,5 @@ int main() {
         edges[s][f] = 1;
         edges[f][s] = 1;
     }
-    bool *visited = new bool[n];
-    for(int i =0 ;i<n;i++){
-        visited[i] = false;
-    }
-   dfs(edges,n,0,visited);
+   dfs_allcomp(edges,n);
 }
