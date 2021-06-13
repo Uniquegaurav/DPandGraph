@@ -27,7 +27,7 @@ void bfs_allcomp( int **edges, int n){
         }
     }
 }
-int main() {
+int main(){
     int n,e;
     cin>>n>>e;
     int **edges = new int*[n];
