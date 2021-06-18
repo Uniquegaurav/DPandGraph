@@ -1,3 +1,19 @@
+// Kruskal's Algorithm
+// Given an undirected, connected and weighted graph G(V, E) with V number of vertices
+//  (which are numbered from 0 to V-1) and E number of edges.
+// Find and print the Minimum Spanning Tree (MST) using Kruskal's algorithm.
+
+
+//  KRUSKAL'S ALGORITHM //
+
+// we will start selecting edges from minimum weight in increasing order of weight
+// if there is no path exist between vertices v1 and v2 we can add the edge v1-v2 into MST
+// if there is already a path we will skip this edge
+// we will add total n-1 edge in this way and the output will be our MST edges 
+
+// if a vertex v1 and v2 lies in differnet component then we can add an edge v1-v2 . else we can't add them.
+
+
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long ll;
