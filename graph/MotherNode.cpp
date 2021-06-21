@@ -1,7 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-class Solution 
-{
+class Solution{
     public:
     //Function to find a Mother Vertex in the Graph.
     void dfs(int n,int sv,vector<int> adj[],bool *visited){
@@ -11,8 +10,7 @@ class Solution
                 dfs(n,i,adj,visited);
         }
     }
-	int findMotherVertex(int V, vector<int>adj[])
-	{   
+	int findMotherVertex(int V, vector<int>adj[]){   
 	    int n = V;
 	    bool * visited = new bool[n];
 	    for(int i =0;i<n;i++){
