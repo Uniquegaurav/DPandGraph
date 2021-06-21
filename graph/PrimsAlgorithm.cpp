@@ -16,28 +16,27 @@ void prims(int ** edges ,int n){
     weights[0] = 0;
     parent[0]  = -1;
     for(int i=1;i<n;i++){
-            weights[i] = INT_MAX;         
+        weights[i] = INT_MAX;         
     }
-    int count  = n-1;
-    while(count--){
+    for(int i =0;i<n-1;i++){
        // get min vertex i.e unvisited vertex with minimnum weight
         int minVertex =  getMinvertex(visited,weights,n);
         visited[minVertex] =  true;
-        for(int i=0;i<n;i++){
-            if(edges[minVertex][i]!=0&&!visited[i]){
-                if(weights[i]>edges[minVertex][i]){
-                    weights[i] = edges[minVertex][i];
-                    parent[i] = minVertex;
+        for(int j=0;j<n;j++){
+            if(edges[minVertex][j]!=0&&!visited[j]){
+                if(weights[j]>edges[minVertex][j]){
+                    weights[j] = edges[minVertex][j];
+                    parent[j] = minVertex;
                      }
                  }
            }
      }
-     for(int i = 1;i<n;i++){
+    for(int i = 1;i<n;i++){
          if(parent[i]<i)
          cout<<parent[i]<<" "<<i<<" "<<weights[i]<<endl;
          else
           cout<<i<<" "<<parent[i]<<" "<<weights[i]<<endl;
-     }     
+    }     
 }
 int main(){
     int n,e;
@@ -55,6 +54,6 @@ int main(){
         edges[f][s] = w;
         edges[s][f] =  w;
     }
-        prims(edges,n);
+    prims(edges,n);
     return 0;
 }
