@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+// Given three arrays sorted in increasing order. Find the elements that are common in all three arrays.
 
 vector <int> commonElements (int A[], int B[], int C[], int n1, int n2, int n3){   
     int i =0 , j=0,k =0;
