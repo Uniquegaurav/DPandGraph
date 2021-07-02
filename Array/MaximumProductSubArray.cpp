@@ -1,3 +1,7 @@
+// Given an array Arr that contains N integers (may be positive, negative or zero).
+//  Find the product of the maximum product subarray.
+
+// https://practice.geeksforgeeks.org/problems/maximum-product-subarray3604/1
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long int ll;
