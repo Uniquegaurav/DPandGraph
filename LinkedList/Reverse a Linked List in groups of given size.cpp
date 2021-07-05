@@ -22,7 +22,7 @@
         node * next = NULL;
         node * curr = head;
         int count  =0 ;
-        while(curr!=NULL&&count<k){
+        while(curr!=NULL&&count<k){ 
             next  = curr->next;
             curr->next = prev;
             prev = curr;

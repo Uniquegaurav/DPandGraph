@@ -38,13 +38,11 @@
                 temp =newNode;
             }else{
                 // adding another file
-                
                 temp->next = newNode;
                 temp = temp->next; 
             }
             cin>>data;
         }
-
         return head;
     }
     // inserting a node to given position
