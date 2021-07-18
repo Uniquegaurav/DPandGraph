@@ -1,6 +1,6 @@
-#include<bits/stdc++.h>
-using namepace std;
 
+#include<bits/stdc++.h>
+using namespace std;
 struct Node {
   int data;
   struct Node *next;
@@ -37,8 +37,4 @@ int intersectPoint(Node* head1, Node* head2)
         return p1->data;
     }
     // Your Code Here
-}
-
-int main(){
-
 }
